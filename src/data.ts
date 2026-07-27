@@ -17,6 +17,10 @@ export type Spotlight = {
   name: string;
   title: string;
   subtitle: string;
+  callout: string;
+  dogStory: string;
+  competitionStory: string;
+  imageCaption: string;
   meta: string[];
   wins: string[];
   body: string[];
@@ -140,8 +144,12 @@ export const spotlights: Spotlight[] = [
   {
     id: "oso",
     name: "Oso",
-    title: "BIS BISS GR CH G Mata Hauri Virtuoso in the Jungle",
-    subtitle: "Best in Show at the 2022 National Specialty and Number 1 Basenji in 2021.",
+    title: "BIS BISS GCHG CH Mata Hauri Virtuoso in the Jungle",
+    subtitle: "Best in Show at the 2022 Basenji Club of America National Specialty and Number 1 Basenji in 2021.",
+    callout: "A fast-maturing special with a national win, a deep show record, and a practical role back at Mata Hauri.",
+    dogStory: "Oso is a homebred son of Jethro and Ginger with the athletic, alert outline Debbie has built around for decades. He finished his Championship and Grand Championship by 7.5 months, then came home to New Hampshire as a CHIC-cleared stud dog with puppies carrying the line forward.",
+    competitionStory: "The 2022 National Specialty Best in Show was not just another ribbon; it put Oso in front of the Basenji community at the breed's biggest stage. Before that, he was the Number 1 Basenji in 2021, earned a Group 1 the first time out as a Special, and collected hound group placements, Bests in Show, and Best of Breed wins.",
+    imageCaption: "Oso at the 2022 BCOA National Specialty, where his Best in Show win anchored the modern Mata Hauri show story.",
     meta: ["Owner: Debbie Hauri", "Breeder: Debbie Hauri", "Shown by: Kim Byrd", "At stud in New Hampshire with CHIC health clearances"],
     wins: ["2022 National Specialty Best in Show", "Number 1 Basenji in 2021", "Championship and Grand Championship by 7.5 months", "Group 1 first time out as a Special"],
     body: [
@@ -161,7 +169,11 @@ export const spotlights: Spotlight[] = [
     id: "marlon",
     name: "Marlon",
     title: "Gr Ch Mata Hauri Klassy's Last Tango",
-    subtitle: "Top Ten 2016 and at stud.",
+    subtitle: "Top Ten Basenji in 2016 and a Mata Hauri stud dog from the Tango x Klassy cross.",
+    callout: "A direct bridge from Tango and Klassy into the next generation of Mata Hauri dogs.",
+    dogStory: "Marlon is by CH Mata Hauri Shall We Dance and out of DC Klassic's Ms Mata Hauri, so his page is really a family-line page too. He carries the clean, elegant show-dog side of the kennel while staying useful as a stud dog.",
+    competitionStory: "His Top Ten 2016 placement makes him more than a pedigree note. Marlon was campaigned, photographed in the ring, and recognized among the top Basenjis that year, keeping the Klassy line visible in active competition.",
+    imageCaption: "Marlon's show photos connect his Top Ten 2016 recognition back to the Tango x Klassy pedigree behind him.",
     meta: ["Owner: Debbie Hauri", "Breeder: Debbie Hauri", "Shown by: Liz Reed", "Born 2014"],
     wins: ["Top Ten 2016", "Grand Champion", "At stud", "From Tango x Klassy"],
     body: [
@@ -169,26 +181,31 @@ export const spotlights: Spotlight[] = [
       "The redesign treats these individual dog pages as profile stories instead of isolated legacy HTML pages.",
     ],
     images: [
-      image("marlon/marlon4.jpg"),
       image("marlon/marlon2.jpg"),
+      image("marlon/marlon4.jpg"),
       image("marlon/marlon3.jpg"),
       image("marlon/marlon1.jpg"),
+      image("our-basenjis/MarlonShow.jpg"),
     ],
   },
   {
     id: "klassy",
     name: "Klassy",
     title: "Ch Klassic's Ms Mata Hauri SC",
-    subtitle: "The top-winning tri-color Basenji of all time.",
+    subtitle: "The top-winning tri-color Basenji of all time and the top-winning Basenji bitch of all time.",
+    callout: "The foundation superstar behind much of the modern Mata Hauri story.",
+    dogStory: "Klassy came to Mata Hauri from Sue Kite and Jeff Gillespie's breeding, then became one of the kennel's defining dogs. Her record is tied to the dog herself: a tri-color bitch with the presence, outline, and consistency to keep winning across several seasons.",
+    competitionStory: "Her run built year by year: National Specialty Sweepstakes Winner and Award of Merit in 2005, National Specialty Best of Breed and Number One Basenji by Breed System in 2006, Number One Basenji all systems and Number 11 Hound in 2007, then America's Number 1 Basenji and Number 10 Hound in 2008.",
+    imageCaption: "Klassy's record includes 6 Bests in Show, 42 Group Firsts, and a multi-year national rankings run with handlers who knew her well.",
     meta: ["Owner: Debbie Hauri", "Breeders: Sue Kite and Jeff Gillespie", "11/21/2004 - 3/17/2021"],
     wins: ["Top-winning tri-color Basenji of all time", "Top winning Basenji bitch of all time", "6 Bests in Show", "42 Group firsts"],
     body: [
-      "Klassy won the National Specialty Sweepstakes and Award of Merit in 2005, Best of Breed in 2006, and America' s Number 1 Basenji in 2008.",
+      "Klassy won the National Specialty Sweepstakes and Award of Merit in 2005, Best of Breed in 2006, and America's Number 1 Basenji in 2008.",
       "Her page keeps the show-history spine intact while making it easier to scan on mobile.",
     ],
     images: [
-      image("klassy-top-basenji.jpg"),
       image("klassy-tricolor-basenji.jpg"),
+      image("klassy-top-basenji.jpg"),
       image("klassy-russella.jpg"),
       image("klassy-russella-champion-basenji.jpg"),
       image("klassy-andrew1.jpg"),

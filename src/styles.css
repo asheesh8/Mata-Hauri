@@ -1920,7 +1920,14 @@ textarea {
 
 .spotlight-card {
   overflow: hidden;
-  padding: 14px;
+  padding: 18px;
+  background:
+    linear-gradient(180deg, rgba(234, 241, 228, 0.38), rgba(255, 253, 247, 0.94)),
+    rgba(255, 253, 247, 0.94);
+}
+
+.spotlight-tabs {
+  margin-bottom: 14px;
 }
 
 .spotlight-tab {
@@ -1932,32 +1939,97 @@ textarea {
 
 .spotlight-layout {
   display: grid;
-  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1fr);
-  gap: 14px;
+  grid-template-columns: minmax(360px, 0.86fr) minmax(0, 1.12fr);
+  gap: 18px;
+  align-items: start;
 }
 
 .spotlight-copy {
-  padding: 18px;
+  display: grid;
+  gap: 15px;
+  padding: 22px;
   border-radius: 8px;
-  background: #243b36;
+  background:
+    linear-gradient(145deg, rgba(26, 67, 58, 0.98), rgba(35, 58, 54, 0.98)),
+    #243b36;
   color: #fff;
+}
+
+.spotlight-copy-head {
+  display: grid;
+  gap: 10px;
+}
+
+.spotlight-copy-head .eyebrow {
+  justify-self: start;
+  background: #f2d7b7;
+  color: var(--clay);
+}
+
+.spotlight-copy-head strong {
+  max-width: 680px;
+  color: rgba(255, 253, 247, 0.82);
+  font-size: 1.02rem;
+  line-height: 1.38;
 }
 
 .spotlight-copy h2 {
+  margin: 0;
   color: #fff;
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 2.45rem;
+  line-height: 1.03;
 }
 
 .spotlight-copy p {
+  margin: 0;
   color: rgba(255, 255, 255, 0.78);
+}
+
+.spotlight-subtitle {
+  max-width: 700px;
+  font-size: 1.06rem;
+  line-height: 1.48;
+}
+
+.spotlight-story-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.spotlight-story-grid article {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 7px 10px;
+  padding: 14px;
+  border: 1px solid rgba(255, 253, 247, 0.13);
+  border-radius: 8px;
+  background: rgba(255, 253, 247, 0.08);
+}
+
+.spotlight-story-grid svg,
+.win-item svg {
+  color: var(--sage);
+}
+
+.spotlight-story-grid span {
+  color: #fffdf7;
+  font-size: 0.78rem;
+  font-weight: 860;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.spotlight-story-grid p {
+  grid-column: 1 / -1;
+  color: rgba(255, 253, 247, 0.8);
+  font-size: 0.97rem;
+  line-height: 1.5;
 }
 
 .meta-stack,
 .win-grid {
   display: grid;
   gap: 8px;
-  margin-top: 14px;
 }
 
 .meta-stack span,
@@ -1969,19 +2041,67 @@ textarea {
 
 .win-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0;
+}
+
+.win-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: rgba(255, 253, 247, 0.9);
+  line-height: 1.3;
+}
+
+.win-item svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.spotlight-people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.spotlight-people span {
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 253, 247, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 253, 247, 0.08);
+  color: rgba(255, 253, 247, 0.76);
+  font-size: 0.82rem;
+  font-weight: 720;
 }
 
 .spotlight-media {
   display: grid;
-  grid-template-rows: minmax(0, 1fr) auto;
+  align-content: start;
+  gap: 12px;
+}
+
+.spotlight-main-frame {
+  display: grid;
   gap: 10px;
+  margin: 0;
 }
 
 .spotlight-main {
   width: 100%;
-  height: 420px;
+  aspect-ratio: 16 / 10;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.spotlight-main-frame figcaption {
+  margin: 0;
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 253, 247, 0.78);
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.45;
 }
 
 .spotlight-thumbs {
@@ -2657,6 +2777,14 @@ textarea {
     font-size: 2.5rem;
   }
 
+  .spotlight-story-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .spotlight-main {
+    aspect-ratio: 16 / 9;
+  }
+
   .admin-tabs {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2999,11 +3127,21 @@ textarea {
   }
 
   .spotlight-main {
-    height: 300px;
+    aspect-ratio: 4 / 3;
+    height: auto;
   }
 
   .spotlight-copy h2 {
     font-size: 2rem;
+  }
+
+  .spotlight-story-grid,
+  .win-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-copy {
+    padding: 18px;
   }
 
   .metric-card strong {

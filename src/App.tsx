@@ -829,15 +829,25 @@ function SpotlightShowcase() {
           transition={{ duration: 0.25 }}
         >
           <div className="spotlight-copy">
-            <span className="eyebrow">{active.name}</span>
-            <h2>{active.title}</h2>
-            <p>{active.subtitle}</p>
-            <div className="meta-stack">
-              {active.meta.map((item) => (
-                <span key={item}>{item}</span>
-              ))}
+            <div className="spotlight-copy-head">
+              <span className="eyebrow">{active.name}</span>
+              <strong>{active.callout}</strong>
             </div>
-            <div className="win-grid">
+            <h2>{active.title}</h2>
+            <p className="spotlight-subtitle">{active.subtitle}</p>
+            <div className="spotlight-story-grid">
+              <article>
+                <Dog size={19} aria-hidden="true" />
+                <span>The dog</span>
+                <p>{active.dogStory}</p>
+              </article>
+              <article>
+                <BadgeCheck size={19} aria-hidden="true" />
+                <span>The competition</span>
+                <p>{active.competitionStory}</p>
+              </article>
+            </div>
+            <div className="win-grid" aria-label={`${active.name} show highlights`}>
               {active.wins.map((win) => (
                 <div className="win-item" key={win}>
                   <BadgeCheck size={17} aria-hidden="true" />
@@ -845,9 +855,17 @@ function SpotlightShowcase() {
                 </div>
               ))}
             </div>
+            <div className="spotlight-people" aria-label={`${active.name} people and pedigree details`}>
+              {active.meta.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
           </div>
           <div className="spotlight-media">
-            <img className="spotlight-main" src={active.images[0]} alt={`${active.name} feature`} />
+            <figure className="spotlight-main-frame">
+              <img className="spotlight-main" src={active.images[0]} alt={`${active.name} feature`} />
+              <figcaption>{active.imageCaption}</figcaption>
+            </figure>
             <div className="spotlight-thumbs">
               {active.images.slice(1).map((src, index) => (
                 <img key={src} src={src} alt={`${active.name} gallery ${index + 1}`} />
